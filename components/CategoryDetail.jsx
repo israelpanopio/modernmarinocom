@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Button, BtnWrapper, ArrowForward, ArrowRight } from '../components/sharedstyles'
-import { NavBar } from '../components';
 
 const CategoryDetail = () => {
   const [hover, setHover] = useState(false);
@@ -9,18 +8,14 @@ const CategoryDetail = () => {
       setHover(!hover);
   }
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-      setIsOpen(!isOpen)
-  }
-
   return (
     <>
-    <NavBar toggle={toggle} />
           <BtnWrapper>
         <Button href="/post/seaman-survival-guide-1" onMouseEnter={onHover} onMouseLeave={onHover}>
-            About Us  {hover ? <ArrowForward /> : <ArrowRight />}
+            Seaman Survival 1  {hover ? <ArrowForward /> : <ArrowRight />}
+        </Button>
+        <Button href="/post/seaman-survival-guide-2" onMouseEnter={onHover} onMouseLeave={onHover}>
+            Seaman Survival 2  {hover ? <ArrowForward /> : <ArrowRight />}
         </Button>
       </BtnWrapper>
     </>
