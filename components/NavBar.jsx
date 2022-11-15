@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FaBars } from 'react-icons/fa';
 import styled from 'styled-components';
 import Link from 'next/link';
-import logo from './mm_logo2.png'
-
 
 const Navbar = ({ toggle }) => {
 
