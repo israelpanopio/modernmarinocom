@@ -20,7 +20,7 @@ const HomeHeader = () => {
                         Marino na may Pangarap
                     </BrandP>
                     <BrandLogo 
-                    src="/images/mm_logo_trans.png"
+                    src="/images/mm_logo_trans.jpg"
                     alt="MM Logo"
                      />
                     </>
