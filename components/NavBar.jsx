@@ -11,9 +11,9 @@ const Navbar = ({ toggle }) => {
         <NavbarContainer>
         <NavLogo href="/">
                 <img
-            src="/images/mm_logo2.png"
-            onMouseOver={e => (e.currentTarget.src = "/images/mm_logo2_blacktrans.png")}
-            onMouseOut={e => (e.currentTarget.src = "/images/mm_logo2.png")}
+            src="/images/mm_logo2.jpg"
+            onMouseOver={e => (e.currentTarget.src = "/images/mm_logo2_blacktrans.jpg")}
+            onMouseOut={e => (e.currentTarget.src = "/images/mm_logo2.jpg")}
             height="40px"
             width="125px"
             alt="Modern Marino"
