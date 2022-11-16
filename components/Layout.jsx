@@ -8,12 +8,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Script  
-        id="Adsense-id"  
-        onError={(e) => { console.error("Script failed to load", e); }}
-        strategy="afterInteractive"
-        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4841621324421656"
-          crossorigin="anonymous"
+      <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-4841621324421656"
+        strategy="beforeInteractive"
+        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
       <Head>
         <title>Modern Marino</title>
@@ -24,13 +23,6 @@ const Layout = ({ children }) => {
       </Head>
       
       {children}
-      <ins class="adsbygoogle"
-            style={{display:"block"}}
-            data-ad-client="ca-pub-4841621324421656"
-            data-ad-slot="6976220356"
-            data-ad-format="auto"
-            data-full-width-responsive="true">
-        </ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       <Footer />
     </>
   )
