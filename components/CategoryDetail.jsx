@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button, BtnWrapper, ArrowForward, ArrowRight, Row, PageItem } from '../components/sharedstyles'
-import { PostCard } from '../components'
+import { PostCard, GoogleAds } from '../components'
 import { getPosts } from '../services';
 
 const CategoryDetail = ({ posts }) => {
@@ -15,9 +15,10 @@ const CategoryDetail = ({ posts }) => {
   return (
     <>
         <h2>Category Details</h2>
+        <GoogleAds />
         <Row>
         {/* {posts.map((post, index) => (
-            <PostCard key={post.node.title} post={post.node} />
+            <PostCard key={post} post={post} />
           ))} */}
         </Row>
         

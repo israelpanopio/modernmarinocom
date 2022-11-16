@@ -1,9 +1,10 @@
 import React from 'react'
 import { SectionTitle, Row } from '../components/sharedstyles'
 import styled from 'styled-components'
+import GoogleAds from './GoogleAds'
 
 const Merch = () => {
-    return (
+    return (<>
         <Section
             id="merch" 
 >
@@ -49,6 +50,7 @@ const Merch = () => {
                 </Col>
             </Row>
         </Section>
+      <GoogleAds /></>
     )
 }
 

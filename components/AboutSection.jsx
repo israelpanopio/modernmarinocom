@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Cntr, Col, Button, BtnWrapper, ArrowForward, ArrowRight } from '../components/sharedstyles'
 import styled from "styled-components";
+import GoogleAds from './GoogleAds';
 
 const AboutSection = () => {
     const [hover, setHover] = useState(false);
@@ -68,7 +69,7 @@ const AboutSection = () => {
                 </p>
              </Col>
             </RowAbout>  
-      <p>&nbsp;</p>
+      <GoogleAds />
 
 
     </Cntr>
