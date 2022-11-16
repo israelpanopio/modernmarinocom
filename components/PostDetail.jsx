@@ -46,9 +46,7 @@ const PostDetail = ({ post }) => {
      data-ad-slot="6509252855"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-           <Script>
-          (adsbygoogle = window.adsbygoogle || []).push({});    
-     </Script>
+
 
         {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
