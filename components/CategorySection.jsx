@@ -17,7 +17,7 @@ const CategorySection = ({ title }) => {
             <DPPage
              href="/category/guide/"
              style={{
-              backgroundImage: `url(${"/images/ssg_dp.jpg"})`
+              backgroundImage: `url(${"/images/mm_dp.jpg"})`
             }} />
         </SectionItem>
         <ItemDescription>
@@ -46,7 +46,7 @@ const CategorySection = ({ title }) => {
         <DPPage
          href="/category/wiseaman/"
          style={{
-              backgroundImage: `url(${"/images/wiseaman_dp.jpg"})`
+              backgroundImage: `url(${"/images/mm_dp.jpg"})`
             }} />
         </SectionItem>
         <ItemDescription3>
