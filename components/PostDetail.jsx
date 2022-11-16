@@ -39,13 +39,7 @@ const PostDetail = ({ post }) => {
   return (
     <>
         <h2>{post.title}</h2>
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-xxxxxxxx"
-            data-ad-slot="xxxxxxxx"
-            data-ad-format="auto"
-            data-full-width-responsive="true">
-        </ins>
+
         {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 

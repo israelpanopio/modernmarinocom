@@ -4,22 +4,16 @@ import Head from 'next/head';
 import Script from "next/script";
 
 const Layout = ({ children }) => {
-  useEffect(() => {
-    var ads = document.getElementsByClassName("adsbygoogle").length;
-    for (var i = 0; i < ads; i++) {
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) { }
-    }
-}, []);
+
 
   return (
     <>
-      <Script
-        id="Adsense-id"
-        data-ad-client="ca-pub-4841621324421656"
+      <Script  
+        id="Adsense-id"  
+        onError={(e) => { console.error("Script failed to load", e); }}
         strategy="afterInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4841621324421656"
+          crossorigin="anonymous"
       />
       <Head>
         <title>Modern Marino</title>
@@ -30,6 +24,13 @@ const Layout = ({ children }) => {
       </Head>
       
       {children}
+      <ins class="adsbygoogle"
+            style={{display:"block"}}
+            data-ad-client="ca-pub-4841621324421656"
+            data-ad-slot="6976220356"
+            data-ad-format="auto"
+            data-full-width-responsive="true">
+        </ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       <Footer />
     </>
   )
