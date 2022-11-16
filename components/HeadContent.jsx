@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Script from "next/script";
 
 const HeadContent = () => {
-  return ( <>
+  return (<>
     <Script data-ad-client="ca-pub-4841621324421656" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></Script>
 
     <Head>
