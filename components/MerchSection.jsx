@@ -1,5 +1,5 @@
 import React from 'react'
-import { SectionTitle, Row } from '../components/sharedstyles'
+import { SectionTitle, Row, Cntr } from '../components/sharedstyles'
 import styled from 'styled-components'
 import GoogleAds from './GoogleAds'
 
@@ -49,8 +49,10 @@ const Merch = () => {
             </NavLink>
                 </Col>
             </Row>
-        </Section>
-      <GoogleAds /></>
+        </Section><Cntr>
+        <GoogleAds style={{margin:"auto"}} />
+        </Cntr>
+      </>
     )
 }
 
