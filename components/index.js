@@ -9,3 +9,4 @@ export { default as Footer } from './Footer';
 export { default as PostDetail } from './PostDetail';
 export { default as PostCard } from './PostCard';
 export { default as CategoryDetail } from './CategoryDetail';
+export { default as GoogleAds } from './GoogleAds';

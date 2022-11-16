@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import GoogleAds from './GoogleAds';
 
 const PostDetail = ({ post }) => {
     const getContentFragment = (index, text, obj, type) => {
@@ -49,18 +50,13 @@ const PostDetail = ({ post }) => {
   return (
     <>
         <h2>{post.title}</h2>
-        <ins className="adsbygoogle"
-            style={{display:"block"}}
-            data-ad-client="ca-pub-4841621324421656"
-            data-ad-slot="6976220356"
-            data-ad-format="auto"
-            data-full-width-responsive="true">
-        </ins>
         {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
 
             return getContentFragment(index, children, typeObj, typeObj.type)
         })}
+        <GoogleAds />
+        <h2>Google Ads</h2>
     </>
 
   )
