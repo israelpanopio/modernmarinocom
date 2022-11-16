@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app'
 import GlobalStyle from '../components/globalstyles'
 import Script from 'next/script'
+import { Layout } from '../components'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,8 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
         />
         <GlobalStyle />
-        <Component {...pageProps} />
-
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
     </>
   )
 }

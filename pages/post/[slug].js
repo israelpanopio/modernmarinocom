@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { getPosts, getPostDetails } from '../../services';
-import { NavBar, PostDetail, Footer, HeadContent } from '../../components';
+import { NavBar, PostDetail, HeadContent } from '../../components';
 import { Cntr } from '../../components/sharedstyles';
 
 
@@ -19,7 +19,6 @@ const PostDetails = ({ post }) => {
       <Cntr>
         <PostDetail post={post} />
       </Cntr>
-      <Footer />
     </>
     
   )
