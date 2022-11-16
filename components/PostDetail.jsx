@@ -1,5 +1,4 @@
 import React from 'react'
-import Script from "next/script";
 
 const PostDetail = ({ post }) => {
     const getContentFragment = (index, text, obj, type) => {
@@ -46,7 +45,6 @@ const PostDetail = ({ post }) => {
      data-ad-slot="6509252855"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-<p>is this page updated?</p>
 
         {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))

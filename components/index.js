@@ -1,4 +1,3 @@
-export { default as HeadContent } from './HeadContent';
 export { default as HomeHeader } from './HomeHeader';
 export { default as NavBarHome } from './NavBarHome';
 export { default as NavBar } from './NavBar';
