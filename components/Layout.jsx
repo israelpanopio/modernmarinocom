@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
       <Script
         id="Adsense-id"
         data-ad-client="ca-pub-4841621324421656"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
       <Head>
