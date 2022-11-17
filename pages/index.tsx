@@ -1,20 +1,26 @@
 import { useState }  from 'react'
-import {} from '../components/sharedstyles'
-import { AboutSection, CategorySection, HomeHeader, NavBarHome, MerchSection } from '../components';
+import { Button, BtnWrapper, ArrowForward, ArrowRight } from '../components/sharedstyles'
+import { AboutSection, CategorySection, HomeHeader, NavBarHome, MerchSection, PostCard } from '../components';
 import { getPosts } from '../services';
 
-export default function Home({ posts }) {
+export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
       setIsOpen(!isOpen)
   }
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+      setHover(!hover);
+  }
+
 
   return (
     <>
         <HomeHeader />
         <NavBarHome toggle={toggle} />
-        <AboutSection />
+        <AboutSection />        
         <CategorySection
           title="Our Guides"
         />
@@ -27,10 +33,3 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-
-  return {
-    props: { posts }
-  }
-}

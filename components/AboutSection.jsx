@@ -50,6 +50,7 @@ const AboutSection = () => {
                     <p></p>
              </Col4>
              <Col>
+             
                 <p>
                     Physical hard work, mental struggles of loneliness, and the everyday
                     courage to face the dangers and challenges in living and sailing the

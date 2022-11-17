@@ -99,12 +99,9 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
  `
-
- 
-
  
 export const Cntr = styled.div`
-max-width: 1000px;
+max-width: 1100px;
 min-height: 80vh;
 margin: 50px auto auto auto;
 background: rgba(255,255,255, 0.5);
@@ -128,6 +125,7 @@ background-position: center;
 background-repeat: no-repeat !important;
 transition: all 1s ease-in-out;
 border-top: 10px double #e3a81e;
+border-bottom: 10px double #e3a81e;
 
 @media screen and (max-width: 1370px) {
     background-position: center 0px;}
@@ -142,10 +140,10 @@ border-top: 10px double #e3a81e;
 `
 
 export const SectionTitle = styled.h2`
-width: 1000px;
+width: 1100px;
 margin: 30px auto 10px auto;
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1158px) {
     max-width: 95%;
     }
 `
@@ -291,9 +289,9 @@ transition: transform 0.25s ease-out;
 `
 
 export const DPPage = styled(Link)`
-  padding-top: 100%;
-background-size: cover;
-background-position: center;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
 `
 
 // General ---------------------------------
@@ -314,8 +312,16 @@ background-repeat: no-repeat !important;
 `
 export const Row = styled.div`
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr;
 
+@media screen and (max-width: 1158px) {
+    max-width: 95%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 @media screen and (max-width: 900px) {
     grid-template-columns: 1fr 1fr;
@@ -333,18 +339,8 @@ display: inline;
 `
 
 // Page------------------------------------
-export const PageItems = styled.div`
-display: grid;
-margin: 7px auto;
-border: 7px double #e3a81e;
-width: 95%;
-background-color: black;
-cursor: pointer;
 
-&:hover{
-border: 12px double #e3a81e;
-}
-`
+
 export const PageItemTitle = styled.a`
 color: #e3a81e;
 text-decoration: none;
