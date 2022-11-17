@@ -4,16 +4,6 @@ import InFeedAds from './InFeedAds';
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
 const PostDetail = ({ post }) => {
-  useEffect(() => {
-    var ads = document.getElementsByClassName("adsbygoogle").length;
-    for (var i = 0; i < ads; i++) {
-      try {
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (e) { }
-    }
-}, []);
-
-
   return (
     <>
         <h2>{post.title}</h2>
