@@ -372,10 +372,10 @@ transition: transform 0.25s ease-out;
 // Post------------------------------------
 export const RowArticle = styled.div`
 display: grid;
-grid-template-columns: 2fr 1fr;
+grid-template-columns: 3fr 1fr;
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 700px) {
 grid-template-columns: 1fr;
 }
 `
