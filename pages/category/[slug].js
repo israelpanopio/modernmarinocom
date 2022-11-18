@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavBar, PostCard } from '../../components';
+import { NavBar, PostCard, Loader } from '../../components';
 import { Cntr, Row } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
 
