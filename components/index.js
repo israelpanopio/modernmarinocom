@@ -11,3 +11,4 @@ export { default as PostCard } from './PostCard';
 export { default as CategoryDetail } from './CategoryDetail';
 export { default as GoogleAds } from './GoogleAds';
 export { default as InFeedAds } from './InFeedAds';
+export { default as Loader } from './Loader';
