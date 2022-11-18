@@ -3,10 +3,10 @@ import { FaGuilded } from 'react-icons/fa'
 import { DPPage, ItemDescription, ItemDescription2, ItemDescription3, Section, SectionContent, SectionItem, SectionTitle, TextDescription, ArrowForward, BtnWrapper, Button } from '../components/sharedstyles'
 
 
-const CategorySection = ({ title, background, category1, description1, profilePhoto1, category2, description2, profilePhoto2 }) => {
+const CategorySection = ({ name, title, background, category1, description1, profilePhoto1, category2, description2, profilePhoto2 }) => {
     return (
         <Section 
-            id="guide" style={{
+            id={name} style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.4)) , url("${background}")`
             }}>
             <SectionTitle>

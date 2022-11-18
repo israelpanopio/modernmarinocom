@@ -87,33 +87,6 @@ export const getCategories = async () => {
     return result.categories;
 }
 
-
-export const getCategoryDetails = async (slug) => {
-    const query = gql`
-        query GetCategoryDetails($slug: String!) {
-            category(where: { slug: $slug }) {
-                createdAt
-                id
-                name
-                slug
-                pageImage {
-                  url
-                }
-                backgroundImage {
-                  url
-                }
-                }
-            }            
-        }
-      
-    `
-
-    const result = await request(graphqlAPI, query, { slug });
-
-    return result.categories;
-};
-
-
 export const getCategoryPost = async (slug) => {
     const query = gql`
       query GetCategoryPost($slug: String!) {

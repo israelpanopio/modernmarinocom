@@ -23,6 +23,7 @@ export default function Home({ sections }) {
       <NavBarHome toggle={toggle} />
       <AboutSection />
       <CategorySection
+        name={"guide"}
         title={guide.title}
         background={guide.background.url}
         category1={guide.category1}
@@ -34,6 +35,7 @@ export default function Home({ sections }) {
       />   
       <MerchSection />
       <CategorySection
+        name={"seafarer"}
         title={seafarer.title}
         background={seafarer.background.url}
         category1={seafarer.category1}
