@@ -142,3 +142,30 @@ export const getCategoryPost = async (slug) => {
     return result.postsConnection.edges;
 };
   
+export const getSection = async () => {
+    const query = gql`
+        query Section {
+            sections {
+                title
+                background {
+                    url
+                }
+                category1
+                description1
+                profilePhoto1 {
+                    url
+                }
+                category2
+                description2
+                profilePhoto2 {
+                    url
+                }
+                slug
+            }
+        }      
+    `
+    const result = await request(graphqlAPI, query);
+
+    return result.sections;
+};
+
