@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { getPosts, getPostDetails } from '../../services';
-import { NavBar, PostDetail } from '../../components';
+import { NavBar, PostDetail, Loader } from '../../components';
 import { Cntr, Col, RowArticle } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
 

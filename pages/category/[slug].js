@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { NavBar, PostCard } from '../../components';
+import { useState } from 'react'
+import { NavBar, PostCard, Loader } from '../../components';
 import { Cntr, Row } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
 import { getCategories, getCategoryPost } from '../../services';
