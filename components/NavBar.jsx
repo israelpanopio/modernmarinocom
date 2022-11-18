@@ -24,6 +24,7 @@ const Navbar = ({ toggle }) => {
                     height="40px"
                     width="125px"
                     alt="Modern Marino"
+                    style={{ borderRadius:"0px", width: "150px" }}
                 />
                 </NavLogo>
                 <MobileIcon onClick={toggle}>
@@ -38,17 +39,6 @@ const Navbar = ({ toggle }) => {
                                     <NavLink key={category.slug} href={`/category/${category.slug}`}>{category.name}</NavLink>
                                 </NavItem>
                             ))}
-                        <NavItem>
-                            <NavLink href="/category/wiseaman">Wise Seaman</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/category/seafarer">Modern Marino Ranks</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/category/seafarer">Seaman Stories</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/category/news">Maritime News</NavLink></NavItem>
                         <NavItem>
                             <NavLink href='/merch'>Merch</NavLink>
                         </NavItem>

@@ -2,15 +2,19 @@ import React, { useEffect } from 'react'
 import GoogleAds from './GoogleAds';
 import InFeedAds from './InFeedAds';
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import { Col, FeaturedImage } from './sharedstyles';
 
 const PostDetail = ({ post }) => {
   return (
-    <>
+    <Col>
         <h2>{post.title}</h2>
-        <GoogleAds />
+        <FeaturedImage 
+          src={post.featureImage.url} 
+        />
+        <InFeedAds />        
         <RichText content={post.content.raw.children} />
-        <InFeedAds />
-    </>
+        <GoogleAds />
+    </Col>
 
   )
 }

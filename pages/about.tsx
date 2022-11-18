@@ -15,6 +15,9 @@ export default function About() {
     <Cntr>
       <RowArticle>
         <AboutUsContent />
+        <Col>
+          <h2>Sidebar</h2>
+        </Col>
       </RowArticle>
     </Cntr>
     </>
@@ -48,7 +51,7 @@ const AboutUsContent = () => {
             that want for them and their families. seaman marino
           </p>
                 <ArticleImgLeft
-                    src="images/about_us.jpg"
+                    src="https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/Kwiw9EssSe2fvVy5tKg3"
                     />
                 <p>
                   Ultimately, we are making a community where positivity towards

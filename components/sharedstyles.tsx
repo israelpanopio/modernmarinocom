@@ -319,7 +319,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1158px) {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -395,6 +395,22 @@ margin-right: auto;
 max-width: 95%;
 max-height: 500px;
 }
+`
+
+export const FeaturedImage = styled.img`
+display: block;
+margin: 0.5rem auto ;
+display: center;
+max-width: 95%;
+
+
+    @media (orientation: landscape) {
+        max-height: 50vh;
+    }
+
+    @media (orientation: portrait) {
+        max-height: 90vh;
+    }
 `
 
 // Pages ---------------------

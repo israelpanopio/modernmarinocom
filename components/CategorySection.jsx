@@ -7,7 +7,7 @@ const CategorySection = ({ title }) => {
     return (
         <Section 
             id="guide" style={{
-                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.4)) , url("images/guide_cover.jpg")'
+                backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.4)) , url("")'
             }}>
             <SectionTitle>
                 {title}

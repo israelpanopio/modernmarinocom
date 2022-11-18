@@ -15,6 +15,24 @@ body {
   scroll-snap-type: y proximity;
 }
 
+img {
+  border-radius: 8px;
+  display: block;
+  margin: auto ;
+  display: center;
+  max-width: 95%;
+  
+  
+      @media (orientation: landscape) {
+          max-height: 40vh;
+          width: auto;
+      }
+  
+      @media (orientation: portrait) {
+          height: auto;
+      }
+}
+
 p{
   font-family: "Montserrat", sans-serif;
   font-size: 18px;

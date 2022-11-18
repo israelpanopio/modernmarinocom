@@ -24,21 +24,25 @@ export default PostCard
 export const PageItems = styled.div`
 display: grid;
 margin: 7px auto;
-border: 7px double #e3a81e;
+border: 8px double #e3a81e;
 width: 95%;
 background-color: black;
 cursor: pointer;
 
 &:hover{
-border: 12px double #e3a81e;
-margin: 3px;
+border: 8px double black;
+background-color: white;
 }
 `
 export const DPPage = styled(Link)`
   padding-top: 100%;
   background-size: cover;
   background-position: center;
-  border-bottom: 4px solid #e3a81e;
+  border-bottom: 3px solid #e3a81e;
+  
+  &:hover{
+  border-bottom: 3px solid white;
+}
 `
 
 export const NavLink = styled(Link)`
@@ -47,17 +51,16 @@ display: flex;
 align-items: center;
 font-size: 1.1rem;
 text-decoration: none;
-padding: 0 1rem;
+padding: 7px 1rem;
 height: 100%;
 cursor: pointer;
 font-family: "Josefin Sans", sans-serif;
-padding-top: 7px;
-padding-bottom: 7px;
-border-radius: 8px;
+background-color: black;
 
 &:hover {
 background-color: #fff;
 color: #000;
 transition: 0.2s ease-in-out;
+background-color: white;
 }
 `

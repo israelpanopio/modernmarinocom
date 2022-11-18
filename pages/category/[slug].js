@@ -1,27 +1,32 @@
-import { useState } from 'react'
-import { NavBar, PostCard, Loader } from '../../components';
+import { useState, useEffect } from 'react'
+import { NavBar, PostCard } from '../../components';
 import { Cntr, Row } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
-
 import { getCategories, getCategoryPost } from '../../services';
 
-const CategoryDetails = ({ posts }) => {
+const CategoryDetails = ({ posts, category }) => {
   const router = useRouter();
 
-  if (router.isFallback) {
-    return <Loader />;
-  }
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
       setIsOpen(!isOpen)
   }
 
-  return (
+  if (router.isFallback) {
+    return (
+      <>
+      <NavBar toggle={toggle} />
+      <Cntr>
+        <Loader />
+    </Cntr>
+    </>
+    )
+  }  return (
     <>
-    <NavBar toggle={toggle} />
-    <Cntr>
-      <h2>Category Name</h2>
+      <NavBar toggle={toggle} />
+      <Cntr>
+        <h2>{category.name}</h2>
         <Row>
           {posts.map((post, index, title ) => (
             <PostCard key={index} post={post.node} title={post.node.title} />
@@ -29,7 +34,6 @@ const CategoryDetails = ({ posts }) => {
         </Row>
     </Cntr>
     </>
-    
   )
 }
 
@@ -37,16 +41,21 @@ export default CategoryDetails
 
 export async function getStaticProps({ params }) {
   const posts = await getCategoryPost(params.slug);
+  const categories = await getCategories();
 
   return {
-    props: { posts },
+    props: { 
+      posts,
+      category: categories.find((({ slug }) => slug === params.slug )) },
   };
 }
 
 export async function getStaticPaths() {
   const categories = await getCategories();
+  
   return {
     paths: categories.map(({ slug }) => ({ params: { slug } })),
     fallback: true,
   };
 }
+

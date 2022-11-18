@@ -33,8 +33,8 @@ const Navbar = ({ toggle }) => {
             onMouseOver={e => (e.currentTarget.src = "images/mm_logo2_blacktrans.jpg")}
             onMouseOut={e => (e.currentTarget.src = "images/mm_logo2.jpg")}
             height="40px"
-            width="125px"
             alt="Modern Marino"
+            style={{ borderRadius:"0px", width: "150px" }}
           />
         </NavLogo>
         <MobileIcon onClick={toggle}>

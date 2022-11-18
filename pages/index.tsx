@@ -18,17 +18,17 @@ export default function Home() {
 
   return (
     <>
-        <HomeHeader />
-        <NavBarHome toggle={toggle} />
-        <AboutSection />        
-        <CategorySection
-          title="Our Guides"
-        />
-        <MerchSection />
-        <CategorySection
-          title="Meet the Seafarers"
-        />
-        <MerchSection />
+      <HomeHeader />
+      <NavBarHome toggle={toggle} />
+      <AboutSection />        
+      <CategorySection
+        title="Our Guides"
+      />
+      <MerchSection />
+      <CategorySection
+        title="Meet the Seafarers"
+      />
+      <MerchSection />
     </>
   )
 }

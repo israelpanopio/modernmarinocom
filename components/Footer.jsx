@@ -35,8 +35,8 @@ const Footer = () => {
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <FooterLinkTitle>Social Medias</FooterLinkTitle>
-                                <FooterLinkMedia href="https://www.facebook.com/modernmarinoako">Facebook</FooterLinkMedia>
-                                <FooterLinkMedia href="https://www.youtube.com/channel/UCCwpHPvUZ4_MMdRbJsgQkwg">Youtube</FooterLinkMedia>
+                                <FooterLink href="https://www.facebook.com/modernmarinoako">Facebook</FooterLink>
+                                <FooterLink href="https://www.youtube.com/channel/UCCwpHPvUZ4_MMdRbJsgQkwg">Youtube</FooterLink>
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
@@ -138,39 +138,16 @@ const FooterLink = styled(Link)`
     font-size: 14px;
     font-family: "Josefin Sans", sans-serif;
     display: inline-block;
-  position: relative;
-
-    &:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-    &:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #e3a81e;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-`
-const FooterLinkMedia = styled.a`
-    color: #e3a81e;
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-    font-size: 14px;
-    font-family: "Josefin Sans", sans-serif;
-    display: inline-block;
     position: relative;
-    cursor: pointer;
+    padding: 0.2rem 0.4rem;
 
-    &:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+  &:hover {
+background-color: #fff;
+color: #000;
+transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    padding: 0.2rem 1rem;
+}
 }
 
     &:after {
@@ -186,6 +163,7 @@ const FooterLinkMedia = styled.a`
   transition: transform 0.25s ease-out;
 }
 `
+
 
 const SocialMedia = styled.section`
     max-width: 1000px;
@@ -207,23 +185,14 @@ const SocialLogo = styled(Link)`
     font-weight: bold;
     display: inline-block;
   position: relative;
+    padding: 0.5rem 0rem;
 
-    &:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-    &:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #e3a81e;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
 }
 
 `
@@ -241,10 +210,18 @@ const SocialIcons = styled.div`
     max-width: 240px;
 `
 
-const SocialIconLink = styled.a`
+const SocialIconLink = styled(Link)`
     font-size: 24px;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
     color: #e3a81e;
+    padding: 0.5rem 1rem 0.2rem 1rem;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 `
