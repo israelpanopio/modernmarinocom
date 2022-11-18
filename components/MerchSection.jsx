@@ -50,8 +50,8 @@ const Merch = () => {
           </NavLink>
         </PageItems>
       </Row>
-    </Section>
     <GoogleAds />
+    </Section>
   </>)
 }
 
