@@ -15,7 +15,7 @@ const Merch = () => {
             href="https://shopee.ph/product/137370070/9698394564?smtt=0.137371894-1644378943.9&fbclid=IwAR0-XorLalvksXdGUVWquXcZ0wBfQltsGUiiDmDEShPHst_eacPqNl7yAc0"
             target="_blank"
             style={{
-            backgroundImage: `url(${"/images/mm_dp.jpg"})`
+            backgroundImage: `url(${"https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/JRquEA2kTbiPlZhVkbar"})`
           }} />
           <NavLink 
             href="https://shopee.ph/product/137370070/9698394564?smtt=0.137371894-1644378943.9&fbclid=IwAR0-XorLalvksXdGUVWquXcZ0wBfQltsGUiiDmDEShPHst_eacPqNl7yAc0" 
@@ -28,7 +28,7 @@ const Merch = () => {
             href="https://shopee.ph/Modern-Marino-Face-Mask-i.86623254.5761857624"
             target="_blank"
             style={{
-            backgroundImage: `url(${"/images/mm_dp.jpg"})`
+            backgroundImage: `url(${"https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/PTgLmYH5S7mX0lzahubD"})`
           }} />
           <NavLink 
             href="https://shopee.ph/Modern-Marino-Face-Mask-i.86623254.5761857624"
@@ -41,7 +41,7 @@ const Merch = () => {
             href="https://shopee.ph/product/137370070/9698394564?smtt=0.137371894-1644378943.9&fbclid=IwAR0-XorLalvksXdGUVWquXcZ0wBfQltsGUiiDmDEShPHst_eacPqNl7yAc0"
             target="_blank"
             style={{
-            backgroundImage: `url(${"/images/mm_dp.jpg"})`
+            backgroundImage: `url(${"https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/EjG4TVEQyytu27ahIWr1"})`
           }} />
           <NavLink 
             href="https://shopee.ph/product/137370070/9698394564?smtt=0.137371894-1644378943.9&fbclid=IwAR0-XorLalvksXdGUVWquXcZ0wBfQltsGUiiDmDEShPHst_eacPqNl7yAc0"
