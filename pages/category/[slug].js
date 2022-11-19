@@ -30,7 +30,7 @@ const CategoryDetails = ({ posts, category }) => {
       <Cntr>
         <h2>{category.name}</h2>
         <Row>
-          {posts.map((post, index, title ) => (
+          {posts.map((post, index ) => (
             <PostCard key={index} post={post.node} title={post.node.title} />
           ))}    
         </Row>

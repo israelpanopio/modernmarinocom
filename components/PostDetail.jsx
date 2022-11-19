@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import GoogleAds from './GoogleAds';
 import InFeedAds from './InFeedAds';
 import { RichText } from "@graphcms/rich-text-react-renderer";
