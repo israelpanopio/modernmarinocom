@@ -335,7 +335,6 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 export const Col = styled.div`
 max-width: 95%;
 display: inline;
-
 `
 
 // Page------------------------------------
@@ -419,4 +418,10 @@ export const DPPost = styled.a`
 background-size: cover;
 background-position: center;
 border-bottom: 4px solid #e3a81e;
+`
+
+// Sidebar ---------------------------
+export const SidebarNav = styled.nav`
+    position: sticky;
+    top: 80px;
 `

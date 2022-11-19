@@ -13,3 +13,4 @@ export { default as GoogleAds } from './GoogleAds';
 export { default as InFeedAds } from './InFeedAds';
 export { default as Loader } from './Loader';
 export { default as Togglebar } from './Togglebar';
+export { default as Widget } from './Widget';

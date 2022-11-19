@@ -47,6 +47,7 @@ export const getPostDetails = async (slug) => {
                         url
                     }
                     id
+                    slug
                     name
                     pageImage {
                         url
@@ -142,3 +143,44 @@ export const getSection = async () => {
     return result.sections;
 };
 
+export const getRecentPosts = async () => {
+    const query = gql`
+        query GetPostDetails(){
+            posts(
+                orderBy: createdAt_ASC
+                last: 4
+            ) {
+                title
+                featureImage {
+                    url
+                }
+                createdAt
+                slug
+            }
+        }
+    `
+    const result = await request(graphqlAPI, query);
+
+    return result.posts;
+}
+
+export const getSimilarPosts = async (categories, slug) => {
+    const query = gql`
+        query GetPostDetails($slug: String!, $categories: [String!]) {
+            posts(
+                where: {slug_not: $slug, AND: {categories_some: { slug_in: $categories}}}
+                last: 4
+            ) {
+                title
+                featureImage {
+                    url
+                }
+                createdAt
+                slug
+            }
+        }
+    `
+    const result = await request(graphqlAPI, query, { slug, categories });
+
+    return result.posts;
+}

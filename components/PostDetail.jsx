@@ -8,9 +8,7 @@ const PostDetail = ({ post }) => {
   return (
     <Col>
         <h2>{post.title}</h2>
-        <FeaturedImage 
-          src={post.featureImage.url} 
-        />
+        <FeaturedImage src={post.featureImage.url} />
         <InFeedAds />        
         <RichText content={post.content.raw.children} />
         <GoogleAds />

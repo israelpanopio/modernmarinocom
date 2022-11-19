@@ -52,7 +52,6 @@ align-items: center;
 font-size: 1.1rem;
 text-decoration: none;
 padding: 7px 1rem;
-height: 100%;
 cursor: pointer;
 font-family: "Josefin Sans", sans-serif;
 background-color: black;

@@ -43,12 +43,12 @@ export default CategoryDetails
 
 export async function getStaticProps({ params }) {
   const posts = await getCategoryPost(params.slug);
-  const categories = await getCategories();
+  const theCategories = await getCategories();
 
   return {
     props: { 
       posts,
-      category: categories.find((({ slug }) => slug === params.slug )) },
+      category: theCategories.find((({ slug }) => slug === params.slug )) },
   };
 }
 

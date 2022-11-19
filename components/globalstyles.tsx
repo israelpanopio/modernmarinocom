@@ -61,6 +61,16 @@ h2 {
   font-size: 30px;
 }
 
+h4 {
+  color: #e3a81e;
+  background-color: #000;
+  text-align: center;
+  border: 8px double #e3a81e;
+  font-size: 24px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 0.4rem 0rem 0rem 0rem;
+}
+
 `
 
 export default GlobalStyle

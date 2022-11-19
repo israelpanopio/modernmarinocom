@@ -1,6 +1,6 @@
 import { useState }  from 'react'
-import { NavBar } from '../components';
-import { ArticleImgLeft, Cntr, Col, RowArticle } from '../components/sharedstyles';
+import { NavBar, Widget } from '../components';
+import { ArticleImgLeft, Cntr, Col, RowArticle, SidebarNav } from '../components/sharedstyles';
 
 export default function About() {  
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +15,10 @@ export default function About() {
     <Cntr>
       <RowArticle>
         <AboutUsContent />
-        <Col>
-          <h2>Sidebar</h2>
+          <Col>
+            <SidebarNav>
+              <Widget />
+            </SidebarNav>
         </Col>
       </RowArticle>
     </Cntr>
