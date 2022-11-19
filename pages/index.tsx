@@ -1,5 +1,5 @@
 import { useState }  from 'react'
-import { AboutSection, CategorySection, HomeHeader, NavBarHome, MerchSection, PostCard } from '../components';
+import { AboutSection, CategorySection, HomeHeader, NavBarHome, MerchSection, PostCard, Togglebar } from '../components';
 import { getSection } from '../services';
 
 export default function Home({ sections }) {
@@ -8,6 +8,7 @@ export default function Home({ sections }) {
   const toggle = () => {
       setIsOpen(!isOpen)
   }
+
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
@@ -20,6 +21,7 @@ export default function Home({ sections }) {
   return (
     <>
       <HomeHeader />
+      <Togglebar isOpen={isOpen} toggle={toggle} />
       <NavBarHome toggle={toggle} />
       <AboutSection />
       <CategorySection

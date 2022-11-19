@@ -26,18 +26,18 @@ const Navbar = ({ toggle }) => {
 
     return (
         <Nav scrollNav={scrollNav}>
-        <NavbarContainer>
-        <NavLogo href="/" onClick={toggleHome}>
-                <img
-            src={"images/mm_logo2.jpg"}
-            onMouseOver={e => (e.currentTarget.src = "images/mm_logo2_blacktrans.jpg")}
-            onMouseOut={e => (e.currentTarget.src = "images/mm_logo2.jpg")}
-            height="40px"
-            alt="Modern Marino"
-            style={{ borderRadius:"0px", width: "150px" }}
-          />
-        </NavLogo>
-        <MobileIcon onClick={toggle}>
+            <NavbarContainer>
+                <NavLogo href="/" onClick={toggleHome}>
+                    <img
+                        src={"images/mm_logo2.jpg"}
+                        onMouseOver={e => (e.currentTarget.src = "images/mm_logo2_blacktrans.jpg")}
+                        onMouseOut={e => (e.currentTarget.src = "images/mm_logo2.jpg")}
+                        height="40px"
+                        alt="Modern Marino"
+                        style={{ borderRadius:"0px", width: "150px" }}
+                    />
+                </NavLogo>
+                <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
@@ -50,8 +50,8 @@ const Navbar = ({ toggle }) => {
                             exact='true'
                             offset={-100}
                         >About</NavLinks>
-                        </NavItem>
-                        <NavItem>
+                    </NavItem>
+                    <NavItem>
                         <NavLinks
                             to="guide"
                             smooth={true}
@@ -60,8 +60,8 @@ const Navbar = ({ toggle }) => {
                             exact='true'
                             offset={-60}
                             >Seaman Survival Guide</NavLinks>
-                        </NavItem>
-                        <NavItem>
+                    </NavItem>
+                    <NavItem>
                         <NavLinks 
                             to="guide"
                             smooth={true}
@@ -70,8 +70,8 @@ const Navbar = ({ toggle }) => {
                             exact='true'
                             offset={-60}
                             >Wise Seaman</NavLinks>
-                        </NavItem>
-                        <NavItem>
+                    </NavItem>
+                    <NavItem>
                         <NavLinks to='seafarer'
                             smooth={true}
                             duration={500}
@@ -79,8 +79,8 @@ const Navbar = ({ toggle }) => {
                             exact='true'
                             offset={-60}
                             >Modern Marino Ranks</NavLinks>
-                        </NavItem>
-                        <NavItem>
+                    </NavItem>
+                    <NavItem>
                         <NavLinks to='seafarer'
                             smooth={true}
                             duration={500}
@@ -88,8 +88,8 @@ const Navbar = ({ toggle }) => {
                             exact='true'
                             offset={-60}
                             >Seaman Stories</NavLinks>
-                        </NavItem>
-                        <NavItem>
+                    </NavItem>
+                    <NavItem>
                         <NavLinks to='news'
                             smooth={true}
                             duration={500}
@@ -97,10 +97,11 @@ const Navbar = ({ toggle }) => {
                             exact='true'
                             offset={-80}
                             >Maritime News</NavLinks></NavItem>
-                        <NavItem>
-                        <NavLink href='/merch'>Merch</NavLink></NavItem>
-                        </NavMenu>
-        </NavbarContainer>
+                    <NavItem>
+                        <NavLink href='/merch'>Merch</NavLink>
+                    </NavItem>
+                </NavMenu>
+            </NavbarContainer>
         </Nav>
     )
 }

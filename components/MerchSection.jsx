@@ -2,7 +2,6 @@ import React from 'react'
 import { SectionTitle, Row } from '../components/sharedstyles'
 import styled from 'styled-components'
 import GoogleAds from './GoogleAds'
-import Link from 'next/link';
 import { DPPage, NavLink, PageItems } from './PostCard';
 
 const Merch = () => {

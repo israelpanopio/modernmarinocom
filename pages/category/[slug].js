@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavBar, PostCard, Loader } from '../../components';
+import { NavBar, PostCard, Loader, Togglebar } from '../../components';
 import { Cntr, Row } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
 import { getCategories, getCategoryPost } from '../../services';
@@ -16,14 +16,16 @@ const CategoryDetails = ({ posts, category }) => {
   if (router.isFallback) {
     return (
       <>
-      <NavBar toggle={toggle} />
-      <Cntr>
-        <Loader />
-    </Cntr>
+        <Togglebar isOpen={isOpen} toggle={toggle} />
+        <NavBar toggle={toggle} />
+        <Cntr>
+          <Loader />
+        </Cntr>
     </>
     )
   }  return (
     <>
+      <Togglebar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <Cntr>
         <h2>{category.name}</h2>

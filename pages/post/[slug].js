@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { getPosts, getPostDetails } from '../../services';
-import { NavBar, PostDetail, Loader } from '../../components';
+import { NavBar, PostDetail, Loader, Togglebar } from '../../components';
 import { Cntr, Col, RowArticle } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
 
@@ -24,6 +24,7 @@ if (router.isFallback) {
   )
 } return (
     <>
+      <Togglebar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <Cntr>
         <RowArticle>
