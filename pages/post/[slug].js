@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { getPosts, getPostDetails } from '../../services';
 import { NavBar, PostDetail, Loader, Togglebar, Widget } from '../../components';
-import { Cntr, Col, RowArticle, SidebarNav } from '../../components/sharedstyles';
+import { Cntr, RowArticle } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
 
 const PostDetails = ({ post }) => {
@@ -29,11 +29,7 @@ if (router.isFallback) {
       <Cntr>
         <RowArticle>
           <PostDetail post={post} />
-          <Col>
-            <SidebarNav>
-              <Widget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
-            </SidebarNav>
-        </Col>
+          <Widget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
         </RowArticle>
       </Cntr>
     </>

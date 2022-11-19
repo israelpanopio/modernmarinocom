@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services'
 import GoogleAds from './GoogleAds';
+import { Col, SidebarNav } from './sharedstyles';
 
 const Widget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -21,22 +22,23 @@ const Widget = ({ categories, slug }) => {
 
 
   return (
-    <div>
-      <h4>{slug ? 'Related Posts' : 'Recent Posts'}</h4>
-      {relatedPosts.map((post, index) => (
-        <WidgetItem key={index}>      
-          <WidgetImage
-            alt={post.title}
-            unoptimized
-            style={{ backgroundImage: `url('${post.featureImage.url}')` }}
-            href={`/post/${post.slug}`}
-          />
-          <NavLink style={{ float: 'right' }} href={`/post/${post.slug}`}>{post.title}</NavLink>
-        </WidgetItem>
-      ))}
-      <GoogleAds />
-    </div>
-            
+    <Col>
+      <SidebarNav>
+        <h4>{slug ? 'Related Posts' : 'Recent Posts'}</h4>
+        {relatedPosts.map((post, index) => (
+          <WidgetItem key={index}>      
+            <WidgetImage
+              alt={post.title}
+              unoptimized="true"
+              style={{ backgroundImage: `url('${post.featureImage.url}')` }}
+              href={`/post/${post.slug}`}
+            />
+            <NavLink style={{ float: 'right' }} href={`/post/${post.slug}`}>{post.title}</NavLink>
+          </WidgetItem>
+        ))}
+        <GoogleAds />
+      </SidebarNav>
+    </Col>
   )
 }
 
