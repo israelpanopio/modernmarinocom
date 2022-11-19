@@ -18,8 +18,7 @@ body {
 img {
   border-radius: 8px;
   display: block;
-  margin: auto ;
-  display: center;
+  margin: auto;
   max-width: 95%;
   
   

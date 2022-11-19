@@ -333,7 +333,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 
 `
 export const Col = styled.div`
-max-width:95%;
+max-width: 95%;
 display: inline;
 
 `
@@ -398,7 +398,6 @@ max-height: 500px;
 `
 
 export const FeaturedImage = styled.img`
-display: block;
 margin: 0.5rem auto ;
 display: center;
 max-width: 95%;
@@ -410,6 +409,7 @@ max-width: 95%;
 
     @media (orientation: portrait) {
         max-height: 90vh;
+        
     }
 `
 

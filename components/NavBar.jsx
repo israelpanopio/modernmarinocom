@@ -34,9 +34,9 @@ const Navbar = ({ toggle }) => {
                         <NavItem>
                             <NavLink href="/about">About</NavLink>
                         </NavItem>
-                            {categories.map((category) => (
-                                <NavItem>
-                                    <NavLink key={category.slug} href={`/category/${category.slug}`}>{category.name}</NavLink>
+                            {categories.map((category, key) => (
+                                <NavItem key={category.slug}>
+                                    <NavLink href={`/category/${category.slug}`}>{category.name}</NavLink>
                                 </NavItem>
                             ))}
                         <NavItem>

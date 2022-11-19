@@ -24,8 +24,8 @@ const Togglebar = ({isOpen, toggle}) => {
                     </SideBarLink>
                 </SideBarMenu>
                 {categories.map((category) => (
-                    <SideBarMenu>
-                        <SideBarLink key={category.slug} href={`/category/${category.slug}`} onClick={toggle}>
+                    <SideBarMenu key={category.slug}>
+                        <SideBarLink href={`/category/${category.slug}`} onClick={toggle}>
                             {category.name}
                         </SideBarLink>
                     </SideBarMenu>
@@ -63,12 +63,23 @@ color: #e3a81e;
 
 const Icon = styled.div`
     position: absolute;
-    top: 1.2rem;
-    right: 1.5rem;
+    top: 3rem;
+    right: 3rem;
     background: transparent;
     font-size: 2rem;
     cursor: pointer;
    outline: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+
+   &:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.2s ease-in-out;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
 `;
 
 
