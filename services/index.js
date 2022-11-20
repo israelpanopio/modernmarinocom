@@ -59,6 +59,7 @@ export const getPostDetails = async (slug) => {
                 featureImage {
                     url
                 }
+                youtube
                 content {
                     raw
                 }

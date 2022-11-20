@@ -212,7 +212,7 @@ display: grid;
 grid-template-columns: 3fr 1fr;
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 grid-template-columns: 1fr;
 }
 `
