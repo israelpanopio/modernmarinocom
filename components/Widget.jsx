@@ -37,8 +37,9 @@ const Widget = ({ categories, slug }) => {
             <NavLink style={{ float: 'right' }} href={`/post/${post.slug}`}>{post.title}</NavLink>
           </WidgetItem>
         ))}
-      </SidebarNav>
+        <p></p>
       <InFeedAds />
+      </SidebarNav>
     </Col>
   )
 }
@@ -96,5 +97,5 @@ const SidebarNav = styled.nav`
     position: sticky;
     top: 80px;
     z-index: 5;
-    margin: 4rem auto;
+    margin-top: 3rem;
 `
