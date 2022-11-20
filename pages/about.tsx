@@ -1,5 +1,5 @@
 import { useState }  from 'react'
-import { NavBar, Widget } from '../components';
+import { GoogleAds, NavBar, Widget } from '../components';
 import { ArticleImgLeft, Cntr, Col, RowArticle } from '../components/sharedstyles';
 import { getPosts } from '../services';
 
@@ -74,6 +74,7 @@ const AboutUsContent = () => {
           #modernmarino!
         </a>
       </p>
+      <GoogleAds />
     </Col>
   )
 }

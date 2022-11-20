@@ -3,7 +3,7 @@ import { FaGuilded } from 'react-icons/fa'
 import { DPPage, ItemDescription, ItemDescription2, ItemDescription3, Section, SectionContent, SectionItem, SectionTitle, TextDescription, ArrowForward, BtnWrapper, Button } from '../components/sharedstyles'
 
 
-const CategorySection = ({ name, title, background, category1, description1, profilePhoto1, category2, description2, profilePhoto2 }) => {
+const CategorySection = ({ name, title, background, category1, description1, profilePhoto1, category2, description2, profilePhoto2, link1, link2 }) => {
     return (
         <Section 
             id={name} style={{
@@ -15,7 +15,7 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             <SectionContent>
             <SectionItem>
             <DPPage
-             href="/category/guide/"
+             href={`/category/${link1}`}
              style={{
               backgroundImage: `url(${profilePhoto1})`
             }} />
@@ -26,7 +26,7 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             </TextDescription>
             <BtnWrapper>
                         <Button
-                        href="/category/guide">
+                        href={`/category/${link1}`}>
                             {category1} <ArrowForward />
                         </Button>
                     </BtnWrapper> 
@@ -37,14 +37,14 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             </TextDescription>
             <BtnWrapper>
                         <Button
-                        href="/category/wiseaman">
+                        href={`/category/${link2}`}>
                             {category2} <ArrowForward />
                         </Button>
                     </BtnWrapper> 
         </ItemDescription2>
         <SectionItem>
         <DPPage
-         href="/category/wiseaman/"
+         href={`/category/${link2}`}
          style={{
               backgroundImage: `url(${profilePhoto2})`
             }} />
@@ -55,7 +55,7 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             </TextDescription>
             <BtnWrapper>
                         <Button
-                        href="/category/wiseaman">
+                        href={`/category/${link2}`}>
                             {category2} <ArrowForward />
                         </Button>
                     </BtnWrapper> 

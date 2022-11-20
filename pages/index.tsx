@@ -31,9 +31,11 @@ export default function Home({ sections }) {
         category1={guide.category1}
         description1={guide.description1}
         profilePhoto1={guide.profilePhoto1.url}
+        link1={"guide"}
         category2={guide.category2}
         description2={guide.description2}
         profilePhoto2={guide.profilePhoto2.url}
+        link2={"wiseaman"}
       />   
       <MerchSection />
       <CategorySection
@@ -43,9 +45,11 @@ export default function Home({ sections }) {
         category1={seafarer.category1}
         description1={seafarer.description1}
         profilePhoto1={seafarer.profilePhoto1.url}
+        link1={"ranks"}
         category2={seafarer.category2}
         description2={seafarer.description2}
         profilePhoto2={seafarer.profilePhoto2.url}
+        link2={"stories"}
       />   
       <MerchSection />
     </>

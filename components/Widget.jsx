@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services'
 import GoogleAds from './GoogleAds';
 import { Col, SidebarNav } from './sharedstyles';
+import { InFeedAds } from '.';
 
 const Widget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -23,6 +24,7 @@ const Widget = ({ categories, slug }) => {
 
   return (
     <Col>
+      <InFeedAds />
       <SidebarNav>
         <h4>{slug ? 'Related Posts' : 'Recent Posts'}</h4>
         {relatedPosts.map((post, index) => (
@@ -36,8 +38,8 @@ const Widget = ({ categories, slug }) => {
             <NavLink style={{ float: 'right' }} href={`/post/${post.slug}`}>{post.title}</NavLink>
           </WidgetItem>
         ))}
-        <GoogleAds />
       </SidebarNav>
+      <InFeedAds />
     </Col>
   )
 }
