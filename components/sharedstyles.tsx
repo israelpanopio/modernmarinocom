@@ -419,9 +419,3 @@ background-size: cover;
 background-position: center;
 border-bottom: 4px solid #e3a81e;
 `
-
-// Sidebar ---------------------------
-export const SidebarNav = styled.nav`
-    position: sticky;
-    top: 80px;
-`

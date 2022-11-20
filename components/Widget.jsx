@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services'
-import GoogleAds from './GoogleAds';
 import { Col, SidebarNav } from './sharedstyles';
 import { InFeedAds } from '.';
 
@@ -92,4 +91,9 @@ color: #000;
 transition: 0.2s ease-in-out;
 background-color: white;
 }
+`
+const SidebarNav = styled.nav`
+    position: sticky;
+    top: 80px;
+    z-index: 5;
 `
