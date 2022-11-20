@@ -106,7 +106,7 @@ const SidebarNav = styled.nav`
 `
 
 const HideAds = styled.div`
-@media screen and (min-width: 700px) {
+@media screen and (max-width: 900px) {
     display: none;
 }
 `
