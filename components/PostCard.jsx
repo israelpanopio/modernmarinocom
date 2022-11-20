@@ -11,9 +11,9 @@ const PostCard = ({ post, title }) => {
           backgroundImage: `url('${post.featureImage.url}')`
       }} />
       <NavLink href={`/post/${post.slug}`}>{
-        (title).length <= 35 
+        (title).length <= 40 
           ? title
-          : `${(title).slice(0, 35)}...`
+          : `${(title).slice(0, 40)}...`
       }</NavLink>
     </PageItems>
   )

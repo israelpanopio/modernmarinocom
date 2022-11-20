@@ -20,10 +20,9 @@ const Widget = ({ categories, slug }) => {
     }
   }, [slug]);
 
-
   return (
     <Col>
-      <InFeedAds />
+    <HideAds><InFeedAds /></HideAds>
       <SidebarNav>
         <h4>{slug ? 'Related Posts' : 'Recent Posts'}</h4>
         {relatedPosts.map((post, index) => (
@@ -34,7 +33,11 @@ const Widget = ({ categories, slug }) => {
               style={{ backgroundImage: `url('${post.featureImage.url}')` }}
               href={`/post/${post.slug}`}
             />
-            <NavLink style={{ float: 'right' }} href={`/post/${post.slug}`}>{post.title}</NavLink>
+            <NavLink style={{ float: 'right' }} href={`/post/${post.slug}`}>
+              {(post.title).length <= 60 
+              ? post.title
+              : `${(post.title).slice(0, 60)}...`}
+            </NavLink>
           </WidgetItem>
         ))}
         <p></p>
@@ -75,13 +78,15 @@ border-bottom: 3px solid white;
 }
 `
 
-const NavLink = styled(Link)`
+export const NavLink = styled(Link)`
 color: #e3a81e;
 display: flex;
 align-items: center;
 font-size: 1rem;
 text-decoration: none;
-padding: 0.2rem;
+margin-top: 0;
+padding-top: 0rem;
+padding-left: 0.2rem;
 cursor: pointer;
 font-family: "Josefin Sans", sans-serif;
 background-color: black;
@@ -98,4 +103,10 @@ const SidebarNav = styled.nav`
     top: 80px;
     z-index: 5;
     margin-top: 3rem;
+`
+
+const HideAds = styled.div`
+@media screen and (min-width: 700px) {
+    display: none;
+}
 `

@@ -1,8 +1,8 @@
 import { useState }  from 'react'
-import { AboutSection, CategorySection, HomeHeader, NavBarHome, MerchSection, PostCard, Togglebar } from '../components';
-import { getSection } from '../services';
+import { AboutSection, CategorySection, HomeHeader, NavBarHome, MerchSection, Togglebar, NewsSection, RecentWidget } from '../components';
+import { getLatestNews, getRecentPosts, getSection } from '../services';
 
-export default function Home({ sections }) {
+export default function Home({ sections, posts, recents }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -17,12 +17,14 @@ export default function Home({ sections }) {
   
   const guide = sections.find(({slug}) => slug === "our-guide");
   const seafarer = sections.find(({slug}) => slug === "meet-the-seafarers");
+  
 
   return (
     <>
       <HomeHeader />
       <Togglebar isOpen={isOpen} toggle={toggle} />
       <NavBarHome toggle={toggle} />
+      <RecentWidget posts={recents}/>
       <AboutSection />
       <CategorySection
         name={"guide"}
@@ -51,15 +53,20 @@ export default function Home({ sections }) {
         profilePhoto2={seafarer.profilePhoto2.url}
         link2={"stories"}
       />   
-      <MerchSection />
+      <NewsSection posts={posts} />
     </>
   )
 }
 
 export async function getStaticProps() {
   const data = await getSection();
+  const posts = await getLatestNews();
+  const recents = await getRecentPosts();
 
   return {
-    props: { sections: data }
+    props: { 
+      posts, 
+      recents,
+      sections: data }
   }
 }

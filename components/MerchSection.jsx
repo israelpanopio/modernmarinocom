@@ -1,8 +1,9 @@
 import React from 'react'
-import { SectionTitle, Row } from '../components/sharedstyles'
+import { Row } from '../components/sharedstyles'
 import styled from 'styled-components'
 import GoogleAds from './GoogleAds'
 import { DPPage, NavLink, PageItems } from './PostCard';
+import { SectionTitle } from './CategorySection';
 
 const Merch = () => {
   return (<>
