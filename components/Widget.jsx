@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services'
-import { Col, SidebarNav } from './sharedstyles';
+import { Col } from './sharedstyles';
 import { InFeedAds } from '.';
 
 const Widget = ({ categories, slug }) => {
