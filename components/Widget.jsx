@@ -96,4 +96,5 @@ const SidebarNav = styled.nav`
     position: sticky;
     top: 80px;
     z-index: 5;
+    margin: 4rem auto;
 `
