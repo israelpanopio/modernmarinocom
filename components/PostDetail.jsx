@@ -18,7 +18,7 @@ const PostDetail = ({ post }) => {
               title="YouTube video player" frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
-            </Iframe> : 'Recent Posts'}</p>
+            </Iframe> : ''}</p>
             
         <GoogleAds />
     </Col>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { ItemDescription, SectionContent, SectionItem, SectionTitle } from './CategorySection'
+import GoogleAds from './GoogleAds'
 import PostCard from './PostCard'
 import { ArrowForward, BtnWrapper, Button, Cntr, DPPage, Row } from './sharedstyles'
 
@@ -45,6 +46,7 @@ const News = ({ posts }) => {
                 <PostCard key={post.slug} post={post} title={post.title} />
             ))}    
         </Row>
+        <GoogleAds />
         </Cntr>
     )
 }

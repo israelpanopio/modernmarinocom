@@ -1,7 +1,6 @@
 import { useState }  from 'react'
 import { GoogleAds, NavBar, Widget } from '../components';
 import { ArticleImgLeft, Cntr, Col, RowArticle } from '../components/sharedstyles';
-import { getPosts } from '../services';
 
 export default function About() {  
   const [isOpen, setIsOpen] = useState(false);

@@ -3,6 +3,7 @@ import { getPosts, getPostDetails } from '../../services';
 import { NavBar, PostDetail, Loader, Togglebar, Widget } from '../../components';
 import { Cntr, RowArticle } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
+import styled from 'styled-components'
 
 const PostDetails = ({ post }) => {
   const router = useRouter();
@@ -24,6 +25,7 @@ if (router.isFallback) {
   )
 } return (
     <>
+      <SocialImage src={post.featureImage.url} />
       <Togglebar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <Cntr>
@@ -57,3 +59,6 @@ export async function getStaticPaths() {
   }
 }
 
+const SocialImage = styled.img`
+  display: none;
+`
