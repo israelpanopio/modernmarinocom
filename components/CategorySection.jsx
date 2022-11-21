@@ -95,7 +95,7 @@ border-bottom: 10px double #e3a81e;
     height: auto;
     border-top: 5px double #e3a81e;}
 
-    @media screen and (max-width: 650px) {
+@media screen and (max-width: 900px) {
     height: auto;}
 `
 

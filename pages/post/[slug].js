@@ -17,6 +17,7 @@ const PostDetails = ({ post }) => {
 if (router.isFallback) {
   return (
     <>
+    <Togglebar isOpen={isOpen} toggle={toggle} />
     <NavBar toggle={toggle} />
     <Cntr>
       <Loader />

@@ -66,7 +66,7 @@ background-color: white;
 
 
 const WidgetImage = styled(Link)`
-padding-top: 100%;
+padding-top: 130%;
 width: 100%;
 background-size: cover;
 background-position: center;

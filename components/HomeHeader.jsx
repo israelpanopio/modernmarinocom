@@ -4,6 +4,7 @@ import styled from "styled-components";
 const HomeHeader = () => {
     return (
         <BrandContainer>
+         <MobileBG src="/images/home_cover.jpg" />
             <BrandContent>
                     <>
                     <BrandH1>
@@ -50,6 +51,17 @@ const BrandContainer = styled.div`
     height: 700px;
  }
 `
+const MobileBG = styled.img`
+   width: auto;
+   height: 100vh;
+   z-index: -10;
+   position: absolute;
+
+   @media screen and (min-width: 900px) {
+    display: none
+ }
+`
+
 const BrandContent = styled.div`
     z-index: 1;
     position: absolute;
