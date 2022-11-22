@@ -15,13 +15,7 @@ const CategoryDetails = ({ posts, category }) => {
 
   if (router.isFallback) {
     return (
-      <>
-        <Togglebar isOpen={isOpen} toggle={toggle} />
-        <NavBar toggle={toggle} />
-        <Cntr>
           <Loader />
-        </Cntr>
-    </>
     )
   }  return (
     <>
@@ -49,6 +43,7 @@ export async function getStaticProps({ params }) {
     props: { 
       posts,
       category: theCategories.find((({ slug }) => slug === params.slug )) },
+      revalidate: 1,
   };
 }
 

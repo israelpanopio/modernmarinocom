@@ -16,13 +16,7 @@ const PostDetails = ({ post }) => {
 
 if (router.isFallback) {
   return (
-    <>
-    <Togglebar isOpen={isOpen} toggle={toggle} />
-    <NavBar toggle={toggle} />
-    <Cntr>
       <Loader />
-  </Cntr>
-  </>
   )
 } return (
     <>
@@ -47,7 +41,8 @@ export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
 
   return {
-    props: { post: data }
+    props: { post: data },
+    revalidate: 1,
   }
 }
 
