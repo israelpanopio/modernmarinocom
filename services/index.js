@@ -94,6 +94,7 @@ export const getCategoryPost = async (slug) => {
             postsConnection(
                 where: {categories_some: {slug: $slug}}
                 orderBy: date_DESC
+                first: 20
             ) {
             edges {
                 cursor
