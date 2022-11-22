@@ -67,6 +67,7 @@ export async function getStaticProps() {
     props: { 
       posts, 
       recents,
-      sections: data }
+      sections: data },
+      revalidate: 1,
   }
 }
