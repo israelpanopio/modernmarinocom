@@ -105,6 +105,7 @@ max-width: 1100px;
 min-height: 80vh;
 margin: 50px auto auto auto;
 background: rgba(255,255,255, 0.5);
+
 @media  screen and (max-width: 1100px) {
     max-width: 90%;
 }
