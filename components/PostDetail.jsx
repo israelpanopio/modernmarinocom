@@ -12,6 +12,7 @@ const PostDetail = ({ post }) => {
         <FeaturedImage src={post.featureImage.url} />
         <InFeedAds />        
         <RichText content={post.content.raw.children} />
+        <GoogleAds />
           <p>{post.youtube ? 
             <Iframe 
               src={`https://www.youtube.com/embed/${post.youtube}`}
@@ -19,8 +20,6 @@ const PostDetail = ({ post }) => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen>
             </Iframe> : ''}</p>
-            
-        <GoogleAds />
     </Col>
 
   )
