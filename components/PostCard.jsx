@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link';
 
 const PostCard = ({ post, title }) => {
   return (
@@ -34,7 +33,7 @@ border: 8px double black;
 background-color: white;
 }
 `
-export const DPPage = styled(Link)`
+export const DPPage = styled.a`
   padding-top: 100%;
   background-size: cover;
   background-position: center;
@@ -45,7 +44,7 @@ export const DPPage = styled(Link)`
 }
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
 color: #e3a81e;
 display: flex;
 align-items: center;

@@ -6,12 +6,31 @@ import { Col, FeaturedImage } from './sharedstyles';
 import styled from 'styled-components'
 
 const PostDetail = ({ post }) => {
+
   return (
     <Col>
         <h2>{post.title}</h2>
         <FeaturedImage src={post.featureImage.url} />
         <InFeedAds />        
         <RichText content={post.content.raw.children} />
+        {post.content2 ? 
+          <>
+          <InFeedAds />  
+          <RichText content={post.content2.raw.children} />
+          </> 
+        : ''}
+        {post.content3 ? 
+          <>
+          <InFeedAds />  
+          <RichText content={post.content3.raw.children} />
+          </> 
+        : ''}
+        {post.content4 ? 
+          <>
+          <InFeedAds />  
+          <RichText content={post.content4.raw.children} />
+          </> 
+        : ''}
         <GoogleAds />
           <p>{post.youtube ? 
             <Iframe 

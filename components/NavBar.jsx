@@ -60,10 +60,6 @@ height: 100%;
 cursor: pointer;
 font-family: "Josefin Sans", sans-serif;
 
-&.active{
-    border-bottom: 3px solid #e3a81e;
-}
-
 &:hover {
 background-color: #fff;
 color: #000;

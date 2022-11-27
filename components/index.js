@@ -16,3 +16,4 @@ export { default as Togglebar } from './Togglebar';
 export { default as Widget } from './Widget';
 export { default as NewsSection } from './NewsSection';
 export { default as RecentWidget } from './RecentWidget';
+export { default as MobileSocial } from './MobileSocial';

@@ -62,6 +62,15 @@ export const getPostDetails = async (slug) => {
                 content {
                     raw
                 }
+                content2 {
+                    raw
+                }
+                content3 {
+                    raw
+                }
+                content4 {
+                    raw
+                }
             }            
         }
       

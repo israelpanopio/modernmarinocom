@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { getPosts, getPostDetails } from '../../services';
-import { NavBar, PostDetail, Loader, Togglebar, Widget } from '../../components';
+import { NavBar, PostDetail, Loader, Togglebar, Widget, MobileSocial } from '../../components';
 import { Cntr, RowArticle } from '../../components/sharedstyles';
 import { useRouter } from 'next/router';
 import styled from 'styled-components'
@@ -28,6 +28,7 @@ if (router.isFallback) {
           <PostDetail post={post} />
           <Widget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
         </RowArticle>
+      <MobileSocial slug={post.slug} />
       </Cntr>
     </>
     

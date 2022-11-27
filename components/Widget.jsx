@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import Link from 'next/link';
 import { getRecentPosts, getSimilarPosts } from '../services'
 import { Col } from './sharedstyles';
 import { InFeedAds } from '.';
@@ -65,7 +64,7 @@ background-color: white;
 `
 
 
-const WidgetImage = styled(Link)`
+const WidgetImage = styled.a`
 padding-top: 130%;
 width: 100%;
 background-size: cover;
@@ -78,7 +77,7 @@ border-bottom: 3px solid white;
 }
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
 color: #e3a81e;
 display: flex;
 align-items: center;

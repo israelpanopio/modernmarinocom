@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'next/link';
 import { NavLink } from './Widget';
 import PostCard from './PostCard';
 
@@ -67,7 +66,7 @@ grid-template-columns: 1fr 1fr;
     display: none;
 }
 `              
-const DPPage = styled(Link)`
+const DPPage = styled.a`
   padding-top: 100%;
   background-size: cover;
   background-position: center;
