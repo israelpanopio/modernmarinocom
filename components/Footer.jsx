@@ -24,14 +24,14 @@ const Footer = () => {
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <FooterLinkTitle>Guides</FooterLinkTitle>
-                                <FooterLink href="/guide">Seaman Survival Guide</FooterLink>
-                                <FooterLink href="/wiseaman">Wise Seaman</FooterLink>
+                                <FooterLink href="/category/guide?page=1">Seaman Survival Guide</FooterLink>
+                                <FooterLink href="/category/wiseaman?page=1">Wise Seaman</FooterLink>
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <FooterLinkTitle>The Seafarers</FooterLinkTitle>
-                                <FooterLink href="/mm-ranks">Modern Marino Ranks</FooterLink>
-                                <FooterLink href="/stories">Stories</FooterLink>
-                                <FooterLink href="/news">Maritime News</FooterLink>
+                                <FooterLink href="/category/ranks?page=1">Modern Marino Ranks</FooterLink>
+                                <FooterLink href="/category/stories?page=1">Stories</FooterLink>
+                                <FooterLink href="/category/news?page=1">Maritime News</FooterLink>
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <FooterLinkTitle>Social Medias</FooterLinkTitle>

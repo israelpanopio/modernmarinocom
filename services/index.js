@@ -103,7 +103,7 @@ export const getCategoryPost = async (slug) => {
             postsConnection(
                 where: {categories_some: {slug: $slug}}
                 orderBy: date_DESC
-                first: 20
+                first: 99
             ) {
             edges {
                 cursor
@@ -120,12 +120,15 @@ export const getCategoryPost = async (slug) => {
                 }
                 }
             }
+            pageInfo {
+              pageSize
+            }
             }
         }    
     `
     const result = await request(graphqlAPI, query, { slug });
 
-    return result.postsConnection.edges;
+    return result.postsConnection;
 };
   
 export const getSection = async () => {

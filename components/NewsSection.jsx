@@ -12,7 +12,7 @@ const News = ({ posts }) => {
             <SectionContent>
             <SectionItem>
             <DPPage
-             href="/category/news"
+             href="/category/news?page=1"
              style={{
                 border: "none",
               backgroundImage: `url(https://media.graphassets.com/output=format:jpg/resize=height:800,fit:max/7TZkCkeSSDC5wZFH7hNr)`
@@ -28,14 +28,14 @@ const News = ({ posts }) => {
             </p>
             <BtnWrapper>
                         <Button
-                        href="/category/news">
+                        href="/category/news?page=1">
                             See the Latest News <ArrowForward />
                         </Button>
                     </BtnWrapper> 
                     <p></p>
                     <BtnWrapper>
                         <Button
-                        href="/category/news">
+                        href="/category/news?page=1">
                             Stay Updated <ArrowForward />
                         </Button>
                     </BtnWrapper> 

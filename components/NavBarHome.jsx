@@ -117,7 +117,7 @@ export const Nav = styled.nav`
     font-size: 1rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 15;
     border-top: 10px double #e3a81e;
   border-bottom: 10px double #e3a81e;
 

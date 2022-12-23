@@ -17,7 +17,7 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             <SectionContent>
             <SectionItem>
             <DPPage
-             href={`/category/${link1}`}
+             href={`/category/${link1}?page=1`}
              style={{
               backgroundImage: `url(${profilePhoto1})`
             }} />
@@ -28,7 +28,7 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             </TextDescription>
             <BtnWrapper>
                         <Button
-                        href={`/category/${link1}`}>
+                        href={`/category/${link1}?page=1`}>
                             {category1} <ArrowForward />
                         </Button>
                     </BtnWrapper> 
@@ -39,14 +39,14 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             </TextDescription>
             <BtnWrapper>
                         <Button
-                        href={`/category/${link2}`}>
+                        href={`/category/${link2}?page=1`}>
                             {category2} <ArrowForward />
                         </Button>
                     </BtnWrapper> 
         </ItemDescription2>
         <SectionItem>
         <DPPage
-         href={`/category/${link2}`}
+         href={`/category/${link2}?page=1`}
          style={{
               backgroundImage: `url(${profilePhoto2})`
             }} />
@@ -57,7 +57,7 @@ const CategorySection = ({ name, title, background, category1, description1, pro
             </TextDescription>
             <BtnWrapper>
                         <Button
-                        href={`/category/${link2}`}>
+                        href={`/category/${link2}?page=1`}>
                             {category2} <ArrowForward />
                         </Button>
                     </BtnWrapper> 
