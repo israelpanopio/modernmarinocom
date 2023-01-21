@@ -73,7 +73,7 @@ const AboutUsContent = () => {
           #modernmarino!
         </a>
       </p>
-      <GoogleAds />
+      <GoogleAds ads={"ads"} />
     </Col>
   )
 }

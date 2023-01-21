@@ -12,7 +12,7 @@ const GoogleAds = ({ads}) => {
       }
   }, []);
 
-  if (!ads) {
+  if (ads == "ads") {
     return (<>
       <ins className="adsbygoogle"
         style={{display:"block", margin:"auto"}}
