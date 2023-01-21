@@ -1,6 +1,5 @@
 import React from 'react'
 import GoogleAds from './GoogleAds';
-import InFeedAds from './InFeedAds';
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { Col, FeaturedImage } from './sharedstyles';
 import styled from 'styled-components'
@@ -11,24 +10,60 @@ const PostDetail = ({ post }) => {
     <Col>
         <h2>{post.title}</h2>
         <FeaturedImage src={post.featureImage.url} />
-        <InFeedAds />        
+        <GoogleAds ads={"article"} />       
         <RichText content={post.content.raw.children} />
+        {post.content1 ? 
+          <>
+          <MobileAds><GoogleAds ads={"infeed"} /></MobileAds>
+          <RichText content={post.content1.raw.children} />
+          </> 
+        : ''}
         {post.content2 ? 
           <>
-          <InFeedAds />  
+          <GoogleAds ads={"top"} />  
           <RichText content={post.content2.raw.children} />
           </> 
         : ''}
         {post.content3 ? 
           <>
-          <InFeedAds />  
+          <MobileAds><GoogleAds ads={"infeed"} /></MobileAds>
           <RichText content={post.content3.raw.children} />
           </> 
         : ''}
         {post.content4 ? 
           <>
-          <InFeedAds />  
+          <GoogleAds ads={"article"} />  
           <RichText content={post.content4.raw.children} />
+          </> 
+        : ''}
+        {post.content5 ? 
+          <>
+          <MobileAds><GoogleAds ads={"infeed"} /></MobileAds>
+          <RichText content={post.content1.raw.children} />
+          </> 
+        : ''}
+        {post.content6 ? 
+          <>
+          <GoogleAds ads={"top"} />  
+          <RichText content={post.content2.raw.children} />
+          </> 
+        : ''}
+        {post.content7 ? 
+          <>
+          <MobileAds><GoogleAds ads={"infeed"} /></MobileAds>
+          <RichText content={post.content3.raw.children} />
+          </> 
+        : ''}
+        {post.content8 ? 
+          <>
+          <GoogleAds ads={"article"} />  
+          <RichText content={post.content4.raw.children} />
+          </> 
+        : ''}
+        {post.content9 ? 
+          <>
+          <MobileAds><GoogleAds ads={"infeed"} /></MobileAds>
+          <RichText content={post.content3.raw.children} />
           </> 
         : ''}
         <GoogleAds />
@@ -58,4 +93,11 @@ const Iframe = styled.iframe`
   @media screen and (max-width: 800px) {
     height: 56vw;
   }
+`
+
+const MobileAds = styled.div`
+  
+  @media screen and (min-width: 900px) {
+    display: none;
+}
 `

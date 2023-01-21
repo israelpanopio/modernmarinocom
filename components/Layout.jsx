@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer } from './'
+import { Coffee, Footer, ScrollToTop } from './'
 import Head from 'next/head';
 import Script from "next/script";
 
@@ -22,6 +22,8 @@ const Layout = ({ children }) => {
       </Head>
       
       {children}
+      <Coffee />
+      <ScrollToTop />
       <Footer />
     </>
   )

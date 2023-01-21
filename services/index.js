@@ -62,6 +62,9 @@ export const getPostDetails = async (slug) => {
                 content {
                     raw
                 }
+                content1 {
+                    raw
+                }
                 content2 {
                     raw
                 }
@@ -69,6 +72,21 @@ export const getPostDetails = async (slug) => {
                     raw
                 }
                 content4 {
+                    raw
+                }
+                content5 {
+                    raw
+                }
+                content6 {
+                    raw
+                }
+                content7 {
+                    raw
+                }
+                content8 {
+                    raw
+                }
+                content9 {
                     raw
                 }
             }            

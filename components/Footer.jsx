@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaYoutube } from 'react-icons/fa'
 import { AiFillMail } from "react-icons/ai";
-import { animateScroll as scroll } from 'react-scroll'
 import styled from "styled-components";
 import Link from 'next/link';
 

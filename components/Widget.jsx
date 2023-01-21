@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { getRecentPosts, getSimilarPosts } from '../services'
 import { Col } from './sharedstyles';
-import { InFeedAds } from '.';
+import GoogleAds from './GoogleAds';
 
 const Widget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -21,7 +21,7 @@ const Widget = ({ categories, slug }) => {
 
   return (
     <Col>
-    <HideAds><InFeedAds /></HideAds>
+    <HideAds><GoogleAds ads={"12vh"} /> </HideAds>
       <SidebarNav>
         <h4>{slug ? 'Related Posts' : 'Recent Posts'}</h4>
         {relatedPosts.map((post, index) => (
@@ -40,7 +40,7 @@ const Widget = ({ categories, slug }) => {
           </WidgetItem>
         ))}
         <p></p>
-      <InFeedAds />
+      <GoogleAds ads={"items"} />
       </SidebarNav>
     </Col>
   )

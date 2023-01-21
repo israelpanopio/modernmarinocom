@@ -28,9 +28,6 @@ const SocialDiv = styled.div`
   padding-bottom: 20px;
   z-index: 10;
 
-  @media screen and (max-width: 900px) {
-  background: white;
-}
 `
 
 const FButton = styled.button`
